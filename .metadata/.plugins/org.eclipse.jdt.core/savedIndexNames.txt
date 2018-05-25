@@ -1,0 +1,10 @@
+INDEX VERSION 1.130+/home/student/ssanz/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3374428318.index
+4080909946.index
+2058517680.index
+3416641170.index
+3683831241.index
+1104065696.index
+332546978.index
+1549653844.index
+3411503452.index

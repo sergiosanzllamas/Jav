@@ -1,0 +1,11 @@
+package proyecto2;
+
+public class Principal {
+
+	public static void main(String[] args) {
+	Coche cocheRamon = new Coche("1234cd","seat","altea",2004,"azul",23.345,'D',true);
+	System.out.println(cocheRamon);
+	
+	}
+
+}
