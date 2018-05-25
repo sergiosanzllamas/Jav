@@ -1,6 +1,5 @@
 package hola;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Buenas {
@@ -14,37 +13,30 @@ public class Buenas {
 		int fila = 0;
 		int columna = 0;
 		inicializarmatriz(matriz, filas, columnas);
-
+		
 		imprimirmatriz(matriz, filas, columnas);
-
-		comprarentrada(matriz, fila, columna, teclado);
-
+		
+		comprarentrada(matriz, filas, columnas, teclado);
+		
 		imprimirmatriz(matriz, filas, columnas);
 
 	}
 
 	private static void comprarentrada(int[][] matriz, int a, int e, Scanner teclado) {
-		try {
-			System.out.println("introduzca fila:");
-			a = teclado.nextInt();
-			System.out.println("introduzca columna:");
-			e = teclado.nextInt();
-				
-			if ((matriz[a][e] == 8) || (matriz[a][e] == 1)) {
-				if (matriz[a][e] != 8) {
-					System.out.println("es pasillo");
-				} else
-					System.out.println("LO siento la bsutaca esta acupada");
+System.out.println("introdux¡zca fila:");
+a = teclado.nextInt();
+System.out.println("introdux¡zca columna:");
+e = teclado.nextInt();
 		
-			} else {
-				matriz[a][e] = 1;
-				System.out.println("La has comprado");
-			}
-		
-		}catch(InputMismatchException error){
-			System.out.println("no introduzca palabras raras");
-		}catch(ArrayIndexOutOfBoundsException error) {
-			System.out.println("el valor no es correcto");
+		if ((matriz[a][e] == 8) || (matriz[a][e] == 1)) {
+			if (matriz[a][e] != 8) {
+				System.out.println("es pasillo");
+			} else
+				System.out.println("LO siento la bsutaca esta acupada");
+
+		} else {
+			matriz[a][e] = 1;
+			System.out.println("La has comprado");
 		}
 	}
 
