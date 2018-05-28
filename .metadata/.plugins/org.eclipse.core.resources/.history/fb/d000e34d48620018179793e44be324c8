@@ -31,7 +31,9 @@ int opcion;
 		System.out.println();
 		System.out.println("Introduzca opción: ");
           opcion = teclado.nextInt();
-		}while(opcion >4)
+		
+		
+	}
 
 	private static void comprarentrada(int[][] matriz, int a, int e, Scanner teclado) {
 		try {
