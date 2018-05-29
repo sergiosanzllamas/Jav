@@ -29,10 +29,10 @@ int opcion;
           opcion = teclado.nextInt();
           switch (opcion) {
 			case 1:
-				imprimirmatriz(matriz, filas, columnas);
+				imprimirMatriz(matriz, filas, columnas);
 				break;
 			case 2:
-				comprarentrada(matriz,fila,columna,teclado);
+				comprarEntradas(matriz,fila,columna,teclado);
 				break;
 			case 3:
 				devolverEntrada(matriz,fila,columna,teclado);

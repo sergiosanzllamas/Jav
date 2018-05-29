@@ -15,9 +15,13 @@ int opcion;
 		int columna = 0;
 		inicializarmatriz(matriz, filas, columnas);
 
-		
+		imprimirmatriz(matriz, filas, columnas);
 
-	
+		comprarentrada(matriz, fila, columna, teclado);
+
+		imprimirmatriz(matriz, filas, columnas);
+
+	}
 	
 	do {
 		System.out.println("1.compra entrada");
@@ -27,45 +31,7 @@ int opcion;
 		System.out.println();
 		System.out.println("Introduzca opción: ");
           opcion = teclado.nextInt();
-          switch (opcion) {
-			case 1:
-				imprimirmatriz(matriz, filas, columnas);
-				break;
-			case 2:
-				comprarentrada(matriz,fila,columna,teclado);
-				break;
-			case 3:
-				devolverEntrada(matriz,fila,columna,teclado);
-				break;
-			case 4:
-				break;
-			default:
-				System.out.println("Introduzca otra opción.");
-				break;
-}
-		}while(opcion != 4);
-	}
-			private static void devolverEntrada(int[][] sala, int fila, int columna, Scanner teclado) {
-			// TODO Auto-generated method stub
-			try {
-				System.out.println("introduzca fila: ");
-				fila = teclado.nextInt();
-				System.out.println("Introduzca columna: ");
-				columna = teclado.nextInt();
-				
-				if((sala[fila][columna] == 8) || (sala[fila][columna] == 0 ))
-					if(sala[fila][columna] == 8)
-						System.out.println("No hay butaca porque es pasillo.");
-					else
-						System.out.println("Esta butaca no esta comprada.");
-				else
-					sala[fila][columna] = 0;
-			}catch(InputMismatchException error) {
-				System.out.println("No introduzca palabras raras.");
-			}catch(ArrayIndexOutOfBoundsException error) {
-				System.out.println("Has introudcido numeros de mas");
-			}
-	}
+		}while(opcion >4)
 
 	private static void comprarentrada(int[][] matriz, int a, int e, Scanner teclado) {
 		try {
