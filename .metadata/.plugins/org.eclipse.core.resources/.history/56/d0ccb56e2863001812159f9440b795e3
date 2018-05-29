@@ -20,9 +20,9 @@ int opcion;
 	
 	
 	do {
-		System.out.println("1.sala");
-		System.out.println("2.compra entrada");
-		System.out.println("3.devuelve entrada");
+		System.out.println("1.compra entrada");
+		System.out.println("2.devuelve entrada");
+		System.out.println("3.sala de cine");
 		System.out.println("4.salir");
 		System.out.println();
 		System.out.println("Introduzca opción: ");
