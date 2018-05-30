@@ -38,6 +38,7 @@ int opcion;
 				devolverEntrada(matriz,fila,columna,teclado);
 				break;
 			case 4:
+				System.out.println("Has salido");
 				break;
 			default:
 				System.out.println("Introduzca otra opción.");
