@@ -1,6 +1,6 @@
 
 public class Alumno extends Persona {
-boolean becado;
+	protected  boolean becado;
 
 public Alumno(String nombre, String apellidos, int edad, char sexo, boolean becado) {
 	super(nombre, apellidos, edad, sexo);
@@ -17,8 +17,11 @@ protected void setBecado(boolean becado) {
 
 @Override
 public String toString() {
-	return "Alumno [becado=" + becado + "]";
+	return "Alumno [nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + ", sexo=" + sexo + ", becado="
+			+ becado + "]";
 }
+
+
 
 
 }
