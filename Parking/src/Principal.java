@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -10,9 +11,9 @@ public class Principal {
 
 		do {
 			System.out.println("1. Ver el parking.");
-			System.out.println("2. Entrada de un coche.");
-			System.out.println("3. Entrada de una moto.");
-			System.out.println("4. Entrada de un autobús.");
+			System.out.println("2.Coche.");
+			System.out.println("3. Moto.");
+			System.out.println("4. Autobús.");
 			System.out.println("5. Salida de un vehículo.");
 			System.out.println("6. Ver recaudación.");
 			System.out.println("7. Salir del programa.");
@@ -25,6 +26,7 @@ public class Principal {
 				imprimirParking(parking, filas, columnas);
 				break;
 			case 2:
+				
 				break;
 			case 3:
 				break;
@@ -46,23 +48,27 @@ public class Principal {
 
 	private static void imprimirParking(char[][] parking, int filas, int columnas) {
 		// TODO Auto-generated method stub
-		for(int f=0; f<filas; f++) {
-			for(int c=0; c<columnas;c++) {
+		for (int f = 0; f < filas; f++) {
+			for (int c = 0; c < columnas; c++) {
 				System.out.print(parking[f][c]);
 			}
 			System.out.println();
 		}
 		System.out.println();
 	}
+
 	private static void iniciaParking(char[][] parking, int filas, int columnas) {
 		// TODO Auto-generated method stub
-		for(int f=0; f<filas; f++) {
-			for(int c=0; c<columnas; c++) {
-				parking[0][0] = 'X';
-				parking[0][8] = 'X';
-				parking[4][0] = 'X';
-				parking[4][8] = 'X';
-}
-		}		
+		for(int r=1; r<4; r++) {
+		for (int f = 0; f < filas; f++) {
+			for (int c = 0; c < columnas; c++) {
+				parking[f][c] = '\0';
+				if((f == 0 && c==0) || (f ==0 && c== 9) || (f==4 && c ==0) || (f==4 && c == 9))
+				parking[f][c] = 'X';
+				if((f==0 && c>=1 && c<=9) || (f ==4 && c>=1 && c<=9))
+				parking[f][c] = 'P';
+			}
+		}
+	}
 }
 }
