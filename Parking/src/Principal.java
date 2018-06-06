@@ -22,9 +22,9 @@ public class Principal {
 			System.out.println("2.Coche.");
 			System.out.println("3. Moto.");
 			System.out.println("4. Autobús.");
-			System.out.println("5. Salida de un vehículo.");
+			System.out.println("5. Salida.");
 			System.out.println("6. Ver recaudación.");
-			System.out.println("7. Salir del programa.");
+			System.out.println("7. Salir.");
 			System.out.println();
 			System.out.println("Introduce opcion: ");
 			opcion = teclado.nextInt();
@@ -52,8 +52,11 @@ public class Principal {
 				System.out.println("Recaudacion de coche: " + cCoche + "€");
 				System.out.println("Recaudacion de moto: " + cMoto + "€");
 				System.out.println("Recaudacion de autobus: " + cAutobus + "€");
+				//Para la recaudacion total tenemos que abrir doble paraentesis para realizar la suma de todas las entradas al parking
+				System.out.println(("Recaudacion del parking:" +(cCoche + cMoto + cAutobus) + "€"));
 				break;
 			case 7:
+				System.out.println("Hasta mañana. Disfrute del dia :)");
 				break;
 			default:
 				System.out.println("Introduce del 1 al 7.");
@@ -73,13 +76,13 @@ public class Principal {
 			c = teclado.nextInt();
 			if (parking[f][c] == 'C' || parking[f][c] == 'A' || parking[f][c] == 'M') {
 				parking[f][c] = '0';
-				System.out.println("Plaza ha sido retirada");
+				System.out.println("Plaza  retirada");
 			} else
 				System.out.println("Esta plaza ocupada o no hay");
 		} catch (InputMismatchException error) {
-			System.out.println("No introduzca palabras raras.");
+			System.out.println("NO PALABRAS.");
 		} catch (ArrayIndexOutOfBoundsException error) {
-			System.out.println("Has introudcido numeros de mas");
+			System.out.println("NUMEROS MAS GRANDES");
 		}
 	}
 
@@ -96,19 +99,19 @@ public class Principal {
 					|| parking[f][c] == 'S' || parking[f][c] == 'C' || parking[f][c] == 'A'
 					|| parking[f][c] == 'M') {
 				if (parking[f][c] == 'X')
-					System.out.println("Esta es la esquina.");
+					System.out.println("Esquina.");
 				if (parking[f][c] == 'X')
-					System.out.println("Esta es la pared.");
+					System.out.println("Pared.");
 				if (parking[f][c] == 'E')
-					System.out.println("Esta es la entrada.");
+					System.out.println("Entrada.");
 				if (parking[f][c] == 'S')
-					System.out.println("Esta es la salida.");
+					System.out.println("Salida.");
 				if (parking[f][c] == 'C')
-					System.out.println("Aqui hay un coche");
+					System.out.println(" Hay un coche");
 				if (parking[f][c] == 'A')
-					System.out.println("Aqui hay un autobus");
+					System.out.println("Hay un autobus");
 				if (parking[f][c] == 'M')
-					System.out.println("Aqui hay una moto");
+					System.out.println("Hay una moto");
 			} else {
 				parking[f][c] = 'A';
 				System.out.println("Matricula:");
@@ -125,9 +128,9 @@ public class Principal {
 			}
 
 		} catch (InputMismatchException error) {
-			System.out.println("No introduzca palabras.");
+			System.out.println("NO PALABRAS.");
 		} catch (ArrayIndexOutOfBoundsException error) {
-			System.out.println("No introduzca palabras.");
+			System.out.println("NUMEROS MAS GRANDES.");
 		}
 		return comprado;
 	}
@@ -143,9 +146,9 @@ public class Principal {
 					|| parking[f][c] == 'S' || parking[f][c] == 'C' || parking[f][c] == 'A'
 					|| parking[f][c] == 'M') {
 				if (parking[f][c] == 'X')
-					System.out.println("Esta es la esquina.");
+					System.out.println("Esquina.");
 				if (parking[f][c] == 'X')
-					System.out.println("Esta es la pared.");
+					System.out.println("Pared.");
 				if (parking[f][c] == 'E')
 					System.out.println("Entrada.");
 				if (parking[f][c] == 'S')
@@ -169,9 +172,9 @@ public class Principal {
 				comprado = true;
 			}
 		} catch (InputMismatchException error) {
-			System.out.println("No introduzca palabras.");
+			System.out.println("NO PALABRAS.");
 		} catch (ArrayIndexOutOfBoundsException error) {
-			System.out.println("No introduzca palabras.");
+			System.out.println("NUMEROS MAS GRANDES.");
 		}
 		return comprado;
 	}
@@ -214,9 +217,9 @@ comprado = true;
 			}
 
 		} catch (InputMismatchException error) {
-			System.out.println("No introduzca palabras.");
+			System.out.println("NO PALABRAS.");
 		} catch (ArrayIndexOutOfBoundsException error) {
-			System.out.println("No introduzca palabras.");
+			System.out.println("NUMEROS MAS GRANDES.");
 		}
 		return comprado;
 	}
@@ -246,7 +249,7 @@ comprado = true;
 					parking[f][c] = 'E';
 				if (f == 3 && c == 0)
 					parking[f][c] = 'S';
-				if (f >= 1 && f < 4 && c >= 1 && c < 8)
+				if (f >= 1 && f < 4 && c >= 1 && c < 9)
 					parking[f][c] = ' ';
 			}
 		}
